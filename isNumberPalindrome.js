@@ -32,3 +32,15 @@ const isNumberPalindrome = (number) => {
   return reversed === number;
 }
  */
+
+function isNumberPalindrome(number) {
+  var string = number.toString();
+  var copy = '';
+  for (var i = string.length - 1; i >= 0; i--) {
+    copy += string[i];
+  }
+  if (parseInt(copy) === number) {
+    return true;
+  }
+  return false;
+}
